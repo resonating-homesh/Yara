@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-top: 23px;
+    margin-left: 34px;
+  }
+  .active {
+    background: #FFA000;
+height: 35px;
+width: 100px;
+border-radius: 6px;
+border: 0;
+font-weight: 700;
+font-size: 15px;
+line-height: 23px;
+color: white;
+margin-right: 10px;
+}
+.inactive {
+    font-weight: 700;
+font-size: 15px;
+line-height: 23px;
+color: #ffa000;
+border: 0;
+height: 35px;
+width: 100px;
+background: #ffffff;
+}
