@@ -11,6 +11,10 @@ const Login = () => {
   const [show, setShow] = useState(false);
   let history = useNavigate();
 
+  const handleHomepage = () => {
+    history("/");
+  }
+
   const handleClick = async (e) => {
     console.log("workinggggg");
     const { email, password } = credentials;
@@ -58,7 +62,7 @@ const Login = () => {
         <p style={{ marginTop: "0" }}>Powered by AI.</p>
       </div>
       <div className="text">Login to Chat</div>
-      <img className="yara" src="image 1.svg"></img>
+      <img onClick={handleHomepage} className="yara" src="image 1.svg"></img>
       <button className="google">
         {" "}
         <img src="google.svg"></img>{" "}

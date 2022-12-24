@@ -45,6 +45,10 @@ const Login = () => {
     history("/login");
   };
 
+  const handleHomepage = () => {
+    history("/");
+  }
+
   return (
     <div className="login">
       <div className="header">
@@ -54,7 +58,7 @@ const Login = () => {
       <p  style={{marginTop: "0"}}>Powered by AI.</p>
       </div>
       <div className="text">Login to Chat</div>
-      <img className="yara" src="image 1.svg"></img>
+      <img onClick={handleHomepage} className="yara" src="image 1.svg"></img>
       <button className="google"> <img src='google.svg'></img> <p style={{marginLeft:"0"}}> Continue with Google </p> </button>
       <div className="row">
         <hr style={{ width: "90px" }} />
