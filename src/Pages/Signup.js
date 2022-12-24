@@ -9,6 +9,7 @@ const Login = () => {
     email: "",
     password: ""
   });
+  const [show, setShow] = useState(false);
 
   let history = useNavigate();
 
@@ -33,8 +34,9 @@ const Login = () => {
         history("/chat");
       } else {
         // Display the error message
-        const errorMessage = document.getElementById('errorMessage');
-        errorMessage.style.display = 'block';
+        // const errorMessage = document.getElementById('errorMessage');
+        // errorMessage.style.display = 'block';
+        setShow(true);
       }
     });
   };
@@ -83,6 +85,7 @@ const Login = () => {
       ></input>
       <button type="submit" className="submit"> Signup </button>
       </form>
+      <div id="errorMessage" style={{ display: `${show ? "block" : "none"}`, color: "red" }}>Error</div>
       <div className="row">
         <hr style={{ width: "90px" }} />
         <p

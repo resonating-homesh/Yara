@@ -8,12 +8,14 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [show, setShow] = useState(false);
   let history = useNavigate();
 
   const handleClick = async (e) => {
     console.log("workinggggg");
     const { email, password } = credentials;
     e.preventDefault();
+
     fetch("/users/login?email=" + email + "&password=" + password)
       .then((response) => response.json())
       .then((data) => {
@@ -22,15 +24,21 @@ const Login = () => {
           // Save the JWT authentication token in local storage
           localStorage.setItem("jwt", data.jwt);
           // Redirect to the chat page
-          // window.location.href = '/chat';
           history("/chat");
         } else {
           // Display the error message
-          const errorMessage = document.getElementById("errorMessage");
-          errorMessage.style.display = "block";
+          // const errorMessage = document.getElementById("errorMessage");
+          // errorMessage.style.display = "block";
+          setShow(true);
         }
       });
   };
+
+  // const errorStyle = () => {
+  //   display=  `${ show ? "block" : "none" }`;
+  //   color= "red";
+
+  // }
 
   const handleSignUp = () => {
     history("/signup");
@@ -96,23 +104,24 @@ const Login = () => {
           value={credentials.password}
           id="password"
         ></input>
-      <div className="test">
-        <Link
-          style={{
-            textDecoration: "none",
-            color: "#475BFF",
-            marginBottom: "10px",
-          }}
-        >
+        <div className="test">
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "#475BFF",
+              marginBottom: "10px",
+            }}
+          >
+            {" "}
+            Forgot Password?{" "}
+          </Link>
+        </div>
+        <button className="submit" style={{ marginBottom: "10px" }}>
           {" "}
-          Forgot Password?{" "}
-        </Link>
-      </div>
-      <button className="submit" style={{ marginBottom: "10px" }}>
-        {" "}
-        Login{" "}
-      </button>
+          Login{" "}
+        </button>
       </form>
+      <div id="errorMessage" style={{ display: `${show ? "block" : "none"}`, color: "red" }}>Invalid email or password.</div>
       <div className="row">
         <hr style={{ width: "90px" }} />
         <p
