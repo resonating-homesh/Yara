@@ -1,0 +1,94 @@
+.login {
+  height: 98vh;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.header {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.yara {
+    padding-bottom: 30px;
+}
+.google {
+  height: 50px;
+  width: 250px;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.test {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 250px;
+}
+.email {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+.password {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 5px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+.submit {
+  height: 35px;
+  width: 250px;
+  background: #ffa000;
+  border-radius: 4px;
+  border: 0;
+  color: white;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
